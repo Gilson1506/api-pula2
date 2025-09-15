@@ -1,17 +1,35 @@
 {
   "version": 2,
-  "functions": {
-    "api/*.js": {
-      "runtime": "@vercel/node@latest"
-    }
-  },
-  "routes": [
+  "builds": [
     {
-      "src": "/api/(.*)",
-      "dest": "/api/$1.js"
+      "src": "api/*.js",
+      "use": "@vercel/node"
     }
   ],
-  "env": {
-    "PAGARME_API_KEY": "@pagarme_api_key"
-  }
+  "routes": [
+    {
+      "src": "/api/test",
+      "dest": "/api/test.js"
+    },
+    {
+      "src": "/api/pagarme",
+      "dest": "/api/pagarme.js"
+    },
+    {
+      "src": "/api/generate-card-hash",
+      "dest": "/api/generate-card-hash.js"
+    },
+    {
+      "src": "/api/pix-details",
+      "dest": "/api/pix-details.js"
+    },
+    {
+      "src": "/api/qr-image",
+      "dest": "/api/qr-image.js"
+    },
+    {
+      "src": "/api/pagarme-webhook",
+      "dest": "/api/pagarme-webhook.js"
+    }
+  ]
 }

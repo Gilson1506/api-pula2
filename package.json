@@ -6,10 +6,10 @@
     "node-fetch": "^3.3.2"
   },
   "scripts": {
-    "start": "node api/index.js",
-    "vercel-build": "echo 'Building...'"
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   }
 }
