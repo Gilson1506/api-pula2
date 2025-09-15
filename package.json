@@ -4,5 +4,12 @@
   "type": "module",
   "dependencies": {
     "node-fetch": "^3.3.2"
+  },
+  "scripts": {
+    "start": "node api/index.js",
+    "vercel-build": "echo 'Building...'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
